@@ -1,0 +1,8 @@
+NAME: Neurons
+DATA_PATH: /scratch-emmy/usr/nimpede1/pcs_v7_volume_rotation/labels_splits_80-10-10
+PC_PATH: /scratch-emmy/usr/nimpede1/pcs_v7_volume_rotation
+LABEL_FILE: df_labels_Microns_v7.pkl
+LABEL_TYPE: cell_type
+N_POINTS: 8192
+NUM_CATEGORY: 12
+USE_NORMALS: FALSE

@@ -1,0 +1,32 @@
+dataset : {
+  train : { _base_: cfgs/dataset_configs/Neurons.yaml,
+            others: {subset: 'train', npoints: 1024}},
+  val : { _base_: cfgs/dataset_configs/Neurons.yaml,
+            others: {subset: 'val', npoints: 1024}},
+  test : { _base_: cfgs/dataset_configs/Neurons.yaml,
+            others: {subset: 'test', npoints: 1024}}}
+dataset_finetune : {
+  train : { _base_: cfgs/dataset_configs/Neurons_finetune.yaml,
+            others: {subset: 'train', npoints: 1024}},
+  val : { _base_: cfgs/dataset_configs/Neurons_finetune.yaml,
+            others: {subset: 'val', npoints: 1024}},
+  test : { _base_: cfgs/dataset_configs/Neurons_finetune.yaml,
+            others: {subset: 'test', npoints: 1024}}}
+model : {
+  NAME: PointTransformer,
+  trans_dim: 384,
+  depth: 12,
+  drop_path_rate: 0.1,
+  cls_dim: 12,
+  num_heads: 6,
+  group_size: 32,
+  num_group: 512,
+  encoder_dims: 384,
+}
+
+
+npoints: 1024
+total_bs : 32
+step_per_update : 1
+max_epoch : 300
+grad_norm_clip : 10
